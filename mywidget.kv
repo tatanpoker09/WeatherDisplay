@@ -1,20 +1,71 @@
 <MyWidget>:
     orientation: 'vertical'
-    RelativeLayout:
-        Label:
-            text: 'Mountain View'
-            size_hint: None, None
-            size: root.width * 0.8, root.height * 0.1
-            pos_hint: {'center_x': 0.5, 'center_y': 0.25}
-            
-        Image:
-            source: 'resources/Sun.png'
-            size_hint: None, None
-            size: root.height * 0.7, root.height * 0.7
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            
-        Label:
-            id: temperature_label
-            size_hint: None, None
-            size: root.width * 0.5, root.height * 0.1
-            pos_hint: {'center_x': 0.5, 'center_y': 0.15}
+
+    Carousel:
+        id: carousel
+        scroll_timeout: 1000  # Adjust the scroll timeout as needed
+
+        RelativeLayout:
+            Label:
+                text: 'Mountain View'
+                size_hint: None, None
+                size: root.width * 0.8, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+
+            Image:
+                source: 'resources/Sun.png'
+                size_hint: None, None
+                size: root.height * 0.7, root.height * 0.7
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+            Label:
+                id: temperature_label
+                size_hint: None, None
+                size: root.width * 0.5, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+
+        RelativeLayout:
+            Label:
+                text: 'Eindhoven'
+                size_hint: None, None
+                size: root.width * 0.8, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+
+            Image:
+                source: 'resources/Sun.png'
+                size_hint: None, None
+                size: root.height * 0.7, root.height * 0.7
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+            Label:
+                id: temperature_label_2
+                size_hint: None, None
+                size: root.width * 0.5, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+
+        RelativeLayout:
+            Label:
+                text: 'Frankfurt'
+                size_hint: None, None
+                size: root.width * 0.8, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+
+            Image:
+                source: 'resources/Sun.png'
+                size_hint: None, None
+                size: root.height * 0.7, root.height * 0.7
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+            Label:
+                id: temperature_label_3
+                size_hint: None, None
+                size: root.width * 0.5, root.height * 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+
+    Button:
+        id: exit_button
+        text: 'Exit'
+        size_hint: None, None
+        size: root.width * 0.2, root.height * 0.1
+        pos_hint: {'center_x': 0.5}
+        on_press: app.stop()

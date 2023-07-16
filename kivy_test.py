@@ -21,7 +21,12 @@ class MyWidget(BoxLayout):
 
     def update_weather(self, dt=None):
         weather = asyncio.run(getweather('Mountain View'))
+        weather_2 = asyncio.run(getweather('Eindhoven'))
+        weather_3 = asyncio.run(getweather('Frankfurt'))
+        print(weather)
         self.ids.temperature_label.text = str(weather.current.temperature)
+        self.ids.temperature_label_2.text = str(weather_2.current.temperature)
+        self.ids.temperature_label_3.text = str(weather_3.current.temperature)
 
 
 class MyApp(App):
