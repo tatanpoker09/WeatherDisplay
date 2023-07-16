@@ -1,0 +1,20 @@
+<MyWidget>:
+    orientation: 'vertical'
+    RelativeLayout:
+        Label:
+            text: 'Mountain View'
+            size_hint: None, None
+            size: root.width * 0.8, root.height * 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.25}
+            
+        Image:
+            source: 'resources/Sun.png'
+            size_hint: None, None
+            size: root.height * 0.7, root.height * 0.7
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            
+        Label:
+            id: temperature_label
+            size_hint: None, None
+            size: root.width * 0.5, root.height * 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.15}
