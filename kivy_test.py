@@ -2,6 +2,7 @@ import asyncio
 
 from kivy.app import App
 from kivy.clock import Clock
+from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 
@@ -25,6 +26,7 @@ class MyWidget(BoxLayout):
 
 class MyApp(App):
     def build(self):
+        Window.fullscreen = True  # Enable fullscreen mode
         return MyWidget()
 
 
